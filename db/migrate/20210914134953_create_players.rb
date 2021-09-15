@@ -5,6 +5,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :position
       t.integer :games_played
       t.integer :at_bats
+      t.float :avg
       t.integer :runs
       t.integer :hits
       t.integer :double
@@ -18,10 +19,10 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.integer :err
       t.integer :win
       t.integer :loss
-      t.integer :era
+      t.float :era
       t.integer :games_started
       t.integer :complete_games
-      t.integer :innings_pitched
+      t.float :innings_pitched
       t.integer :saves
       t.belongs_to :team, foreign_key: true
     end
