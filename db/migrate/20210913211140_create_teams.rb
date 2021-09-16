@@ -3,9 +3,12 @@ class CreateTeams < ActiveRecord::Migration[6.1]
     create_table :teams do |t|
       t.string :team_name
       t.string :city
-      t.string :league
+      t.string :conference
       t.string :standing
-      t.belongs_to :users, foreign_key: true
+      t.integer :wins
+      t.integer :losses
+      
+    
 
     end
   end

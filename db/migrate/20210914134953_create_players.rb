@@ -2,28 +2,21 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
   def change
     create_table :players do |t|
       t.string :name
+      t.integer :number
       t.string :position
-      t.integer :games_played
-      t.integer :at_bats
-      t.float :avg
-      t.integer :runs
-      t.integer :hits
-      t.integer :double
-      t.integer :triple
-      t.integer :home_runs
-      t.integer :rbi
-      t.integer :walks
-      t.integer :strike_outs
-      t.integer :stolen_bases
-      t.integer :batting_avg
-      t.integer :err
-      t.integer :win
-      t.integer :loss
-      t.float :era
-      t.integer :games_started
-      t.integer :complete_games
-      t.float :innings_pitched
-      t.integer :saves
+      t.integer :games
+      t.integer :points
+      t.float :field_goals
+      t.float :fg_percentage
+      t.float :three_points
+      t.float :freethrows
+      t.float :offensive_rebounds
+      t.float :defensive_rebounds
+      t.float :rebounds
+      t.float :assist
+      t.float :steals
+      t.float :turnovers
+      t.float :fouls   
       t.belongs_to :team, foreign_key: true
     end
   end

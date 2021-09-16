@@ -14,28 +14,21 @@ ActiveRecord::Schema.define(version: 2021_09_14_143430) do
 
   create_table "players", force: :cascade do |t|
     t.string "name"
+    t.integer "number"
     t.string "position"
-    t.integer "games_played"
-    t.integer "at_bats"
-    t.float "avg"
-    t.integer "runs"
-    t.integer "hits"
-    t.integer "double"
-    t.integer "triple"
-    t.integer "home_runs"
-    t.integer "rbi"
-    t.integer "walks"
-    t.integer "strike_outs"
-    t.integer "stolen_bases"
-    t.integer "batting_avg"
-    t.integer "err"
-    t.integer "win"
-    t.integer "loss"
-    t.float "era"
-    t.integer "games_started"
-    t.integer "complete_games"
-    t.float "innings_pitched"
-    t.integer "saves"
+    t.integer "games"
+    t.integer "points"
+    t.float "field_goals"
+    t.float "fg_percentage"
+    t.float "three_points"
+    t.float "freethrows"
+    t.float "offensive_rebounds"
+    t.float "defensive_rebounds"
+    t.float "rebounds"
+    t.float "assist"
+    t.float "steals"
+    t.float "turnovers"
+    t.float "fouls"
     t.integer "team_id"
     t.index ["team_id"], name: "index_players_on_team_id"
   end
@@ -45,8 +38,8 @@ ActiveRecord::Schema.define(version: 2021_09_14_143430) do
     t.string "city"
     t.string "league"
     t.string "standing"
-    t.integer "users_id"
-    t.index ["users_id"], name: "index_teams_on_users_id"
+    t.integer "wins"
+    t.integer "losses"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,5 +49,4 @@ ActiveRecord::Schema.define(version: 2021_09_14_143430) do
   end
 
   add_foreign_key "players", "teams"
-  add_foreign_key "teams", "users", column: "users_id"
 end
