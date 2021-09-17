@@ -6,7 +6,7 @@ Team.destroy_all
 User.destroy_all
 # Seed your database here
 30.times do 
-    team_name = Faker::Sports::Basketball.team
+    team_name = Faker::Sports::Basketball.unique.team
     city = Faker::Team.unique.state
     standing =Faker::Number.unique.between(from: 1, to: 30)
     wins = Faker::Number.between(from: 1, to: 72)

@@ -4,4 +4,4 @@ class TeamController < ApplicationController
     Team.all.to_json(:include => :players)
   end
 
-end
+end7
