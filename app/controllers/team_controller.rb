@@ -1,7 +1,7 @@
 class TeamController < ApplicationController
 
-    get "/team" do
-        Teams.all.to_json
-      end
+  get "/team" do
+    Team.all.to_json(:include => :players)
+  end
 
 end

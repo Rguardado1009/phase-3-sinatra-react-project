@@ -14,6 +14,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.float :defensive_rebounds
       t.float :rebounds
       t.float :assist
+      t.float :blocks
       t.float :steals
       t.float :turnovers
       t.float :fouls   

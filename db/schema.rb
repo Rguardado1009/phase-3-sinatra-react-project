@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_143430) do
     t.float "defensive_rebounds"
     t.float "rebounds"
     t.float "assist"
+    t.float "blocks"
     t.float "steals"
     t.float "turnovers"
     t.float "fouls"
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_143430) do
     t.string "standing"
     t.integer "wins"
     t.integer "losses"
+    t.string "logo"
   end
 
   create_table "users", force: :cascade do |t|
